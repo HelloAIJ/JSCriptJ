@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>35P 내부 스크립트 - 무작위 배경색 변경</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1>자바스크립트 시작하기 : 간단한 스크립트 소스 작성하기</h1>
+  <h2>웹 문서에서 스크립트 소스 작성하기</h2>
+  <h3>내부 스크립트 : 내부 스크립트를 작성해 무작위로 문서의 배경색 바꾸기</h3>
+  <p>새로 고침해 보세요</p>
+  <script>
+    function random(number) {
+      return Math.floor(Math.random() * number);
+    }
+
+    function bgChange() {
+      const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      console.log(rndCol);
+      document.body.style.backgroundColor = rndCol;
+    }
+
+    bgChange();
+  </script>
+</body>
+
+</html>
