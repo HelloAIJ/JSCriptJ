@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지오로케이션 API 연습</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+    }
+
+    #result {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="getLocation">위치 정보 가져오기</button>
+  <div id="result"></div>
+
+  <script>
+    const getLocation = document.getElementById('getLocation');
+    getLocation.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, errorPosition);
+
+        const options = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+        };
+
+        let watchId = navigator.geolocation.watchPosition(showPosition, errorPosition, options);
+
+        setTimeout(function () {
+          navigator.geolocation.clearWatch(watchId);
+        }, 30000);
+
+      } else {
+        alert('지오로케이션을 지원하지 않습니다.');
+      }
+    });
+
+    function showPosition(position) {
+      document.querySelector("#result").innerHTML = `
+        <b>위도:</b> ${position.coords.latitude}, <b>경도:</b> ${position.coords.longitude}
+      `;
+    };
+
+    function errorPosition(err) {
+      alert(err.message);
+    }
+  </script>
+</body>
+
+</html>
+https://www.google.com/maps/place/%EC%9D%B4%EC%A7%80%EB%94%94%EC%9E%90%EC%9D%B8%EC%BB%B4%ED%93%A8%ED%84%B0%ED%95%99%EC%9B%90/data=!4m6!3m5!1s0x3565288f69705ec5:0xb6a5118e9b863d8d!8m2!3d36.634997!4d127.4577953!16s%2Fg%2F1th19kmw?entry=ttu
+
+
+https://naver.me/xAtWpP4W
+https://map.naver.com/p/search/%EC%9D%B4%EC%A7%80%EB%94%94%EC%9E%90%EC%9D%B8%EC%BB%B4%ED%93%A8%ED%84%B0%ED%95%99%EC%9B%90/place/11613773?c=15.00,0,0,0,dh&placePath=%3Fentry%3Dpll
+
+<!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1703568405053" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script"
+  src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+  new daum.roughmap.Lander({
+    "timestamp": "1703568405053",
+    "key": "2hdab",
+    "mapWidth": "640",
+    "mapHeight": "360"
+  }).render();
+</script>

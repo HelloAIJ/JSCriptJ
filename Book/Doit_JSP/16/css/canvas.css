@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+}
+/* 3-2 night 배경 추가 */
+canvas.night {
+  background-color: #020712;
+  /* background-color: #02071F; */
+}
