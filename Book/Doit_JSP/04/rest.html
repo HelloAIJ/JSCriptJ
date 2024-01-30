@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>148P 전개구문 사용해보기</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <h1>함수와 스코프 : 전개구문</h1>
+  <h2>전개구문의 작성방법</h2>
+  <h3>전개구문 사용해보기</h3>
+  <p style="font-size: 21px; color:blue;">
+    전개구문이란, 말 그대로 '값을 펼쳐 주는' 구문으로</p>
+  <p style="text-align:left; font-size: 18px; color:blue;">
+    fruits = ["apple", "banana", "grape"]<br>
+    document.write(fruits)</p>
+  <p style="text-align:center; font-size: 16px; color:blue;">
+    위와 같이 fruits라는 배열을 만들고 이를 호출하면<br>
+    인덱스 0부터 2까지 3개의 값이 들어 있고<br>
+    length 프로퍼티에도 3이 저장되어 있음을 확인할 수 있다.</p>
+  같은 배열에 대해 전개구문에서는 3개의 마침표를 이용하여 '...배열명'과 같이 표기하고
+  <p>documnet.write(...fruits)</p>
+  로 호출하면 오로지 배열에 있는 값만 아래와 같이 펼쳐 보여준다.
+  <p>apple banana grape<br>(콘솔에서 값 확인)</p>
+
+  <script src="js/rest.js"></script>
+</body>
+
+</html>
