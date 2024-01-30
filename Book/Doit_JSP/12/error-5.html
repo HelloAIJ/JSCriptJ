@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예외 처리(error5)</title>
+</head>
+
+<body>
+  <h1>예외 처리했을 때(error5)</h1>
+
+  <script>
+    let json = '{"grade": 3, "age": 25}';
+
+    try {
+      let user = JSON.parse(json);
+      /** 가장 빡치는 경우가 내가 데이터를 해결할 수 없는 상황임.
+        *  파일도 있어, 서버도 안정적이야, 일부 객체에는 데이터가 있어,
+        *  극히 일부에서 알맹이가 빠져있는경우
+        *  undefined로 표시되면서 데이터의 신뢰도가 떨어짐
+        *  이런경우를 따로 짚어내서 오류메시지 뽑아내게 할 수 있음(에러캐치의 초기대응용)
+        *  throw 예약어는 try{} 안에 써준다
+        */
+      console.log(user.name); // undefined
+      if (!user.name) {
+        // 해당조건 null찾는 방법
+        throw "사용자 이름이 없습니다.";
+      }
+      console.log(user.name); // undefined, 에러가 생길법한 이슈를 throw 다음구문에 적어둔다
+      if (!user.grade) {
+        throw "사용자 학년정보가 없습니다.";
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  </script>
+</body>
+
+</html>
