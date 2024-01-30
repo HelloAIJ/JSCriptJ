@@ -1,0 +1,72 @@
+.header-tab > span {
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  line-height: 36px;
+  background-color: #fff;
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  font-size: 24px;
+}
+.header-tab > span.on {
+  background-color: rgb(252, 207, 211);
+  color: rgba(255, 0, 0, 0.8);
+}
+.header-con-tab {
+  display: none;
+}
+.header-con > .on {
+  display: block;
+}
+.header-con > span {
+  display: none;
+}
+.header-con > span.on {
+  display: block;
+}
+.header-con-tab {
+  display: none;
+}
+.header-con .on {
+  display: block;
+}
+.header-con-tab > span {
+  display: block;
+  width: 400px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.header-con-tab > span.on {
+  color: black;
+}
+.do-it {
+  font-weight: bold;
+}
+.main-tab > span {
+  display: block;
+  width: 500px;
+  height: 40px;
+  line-height: 36px;
+  /*border: 1px solid rgba(255, 255, 255, 0.8);*/
+  margin: 0 auto;
+  text-align: left;
+}
+.main-tab {
+  display: none;
+}
+.main-tab-list > .on {
+  display: block;
+}
+.main-tab > span.on {
+  color: red;
+}
+.main-con {
+  display: none;
+}
+.main-con-list .on {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+}

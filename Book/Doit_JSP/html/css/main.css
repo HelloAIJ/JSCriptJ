@@ -1,0 +1,72 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+.body-section-divide {
+  display: block;
+  text-align: right;
+}
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+p {
+  display: block;
+  margin: 20px auto;
+  font-size: 1.4em;
+  padding: 10px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  /* background-color:antiquewhite; */
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc;
+}
+div {
+  margin: 10px auto;
+
+}
+
+body {}
+header {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  color: #555;
+}
+main {
+  border: 1px solid rgba(255, 0, 0, 0.1);
+  background-color: rgba(255, 0, 0, 0.2);
+  color: black;
+}
+footer {
+  border: 1px solid rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.2);
+  color: blue;
+}
+.main-con {
+  padding: 20px;
+}
+.main-con-contents {
+  display: inline-block;
+  text-align: center;
+}
+iframe {
+  width: 1200px;
+  border: none;
+}
+a {
+  display: block;
+  text-align: left;
+}
+.quiz, .prt {
+  font-weight: bold;
+  color: blue;
+}
+.main-tab > .quiz {
+  text-align: center;
+}
+.main-tab > .prt {
+  text-align: center;
+}

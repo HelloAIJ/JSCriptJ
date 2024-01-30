@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모던 자바 스크립트 프로그래밍의 정석</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tab-menu-style.css">
+  <script defer src="js/menu-tab.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <span class="body-section-divide">header</span>
+    <div>
+      <h1 class="header-title">[강의 교재] 모던 자바 스크립트 프로그래밍의 정석</h1>
+      <div class="header-gnb">
+        <div class="header-tab">
+          <span>첫째마당</span>
+          <span>둘째마당</span>
+          <span>셋째마당</span>
+          <span>넷째마당</span>
+          <span>다섯째마당</span>
+          <span>여섯째마당</span>
+        </div>
+        <div class="header-con">
+          <div class="header-con-tab">
+            <span>자바스크립트 시작하기</span>
+            <span>프로그래밍의 기본, 변수와 자료형 살펴보기</span>
+            <span>연산자와 제어문</span>
+            <span>프로그래밍 한발 더 나가기, 함수와 스코프</span>
+          </div>
+          <div class="header-con-tab">
+            <span>DOM(Document Object Model)의 기초</span>
+            <span>이벤트와 이벤트 처리하기</span>
+            <span>DOM(Document Object Model) 활용하기</span>
+          </div>
+          <div class="header-con-tab">
+            <span>자주 사용하는 내장 객체 알아보기</span>
+            <span>자바스크립트 객체 만들기</span>
+            <span>효율적으로 문자열과 배열 활용하기</span>
+            <span>배열과 객체, 좀 더 깊게 살펴보기</span>
+          </div>
+          <div class="header-con-tab">
+            <span>HTTP 통신과 JSON</span>
+            <span>비동기 프로그래밍</span>
+          </div>
+          <div class="header-con-tab">
+            <span>캔버스로 도형, 텍스트, 이미지 그리기</span>
+            <span>캔버스로 그래픽 요소 다루기</span>
+            <span>캔버스에서 애니메이션 실행하기</span>
+          </div>
+          <div class="header-con-tab">
+            <span>웹 API 활용하기</span>
+            <span>공개 API 활용하기</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <span class="body-section-divide">main</span>
+    <div>
+      <h2 class="main-title">소제목</h2>
+      <div class="main-gnb">
+        <div class="main-tab-list">
+          <div class="main-tab">
+            <span>01-1 자바스크립트를 위한 기본 상식</span>
+            <span>01-2 웹 개발에서 자바스크립트의 역할</span>
+            <span>01-3 코드 작성을 위한 편집기 설정하기</span>
+            <span>01-4 간단한 스크립트부터 시작하기</span>
+          </div>
+          <div class="main-tab">
+            <span>02-1 프로그램에서 입력받고 출력하는 방법</span>
+            <span>02-2 프로그램과 친해지려면 변수부터 익히자</span>
+            <span>02-3 컴퓨터가 세상을 보는 방법, 자료형</span>
+            <span>02-4 자바스크립트의 장점이자 단점, 자료형 변환</span>
+            <span class="do-it">Do it 실습 화씨온도를 섭씨온도로 변환하기</span>
+            <span class="quiz">마무리 문제</span>
+            <span class="prt">심화학습</span>
+          </div>
+          <div class="main-tab">
+            <span>03-1 프로그램 동작을 가르키는 기호, 연산자</span>
+            <span>03-2 프로그램 흐름을 자유롭게 조절하는 조건문</span>
+            <span class="do-it">Do it 짝수와 홀수를 구별하는 프로그램 만들기</span>
+            <span>03-3 같은 동작을 손쉽게 반복하는 반복문</span>
+            <span class="do-it">Do it 소수인지의 여부 확인하기</span>
+            <span class="quiz">마무리 문제</span>
+            <span class="prt">심화학습</span>
+          </div>
+          <div class="main-tab">
+            <span>04-1 프로그래밍의 꽃, 함수</span>
+            <span class="do-it">Do it 웹 개발자 도구 창의 디버깅 기능 살펴보기</span>
+            <span>04-2 변수의 유효범위, 스코프</span>
+            <span class="do-it">Do it 웹 개발자 도구 창에서 스코프 확인하기</span>
+            <span>04-3 이름 없이 사용하는 함수 표현식</span>
+            <span class="do-it">Do it 입력값을 표시하는 콜백 함수 만들기</span>
+            <span>04-4 전개구문</span>
+            <span>04-5 시간을 고려하는 타이머 함수</span>
+            <span class="quiz">마무리 문제</span>
+            <span class="prt">심화학습</span>
+          </div>
+          <div class="main-tab">
+            <span>05-1 DOM과 DOM 트리</span>
+            <span>05-2 웹요소의 접근하기</span>
+            <span>05-3 자바스크립트로 스타일 수정하기</span>
+            <span>05-4 DOM에서 폼 다루기</span>
+          </div>
+          <div class="main-tab">
+            <span>06-1 이벤트 알아보기</span>
+            <span>06-2 이벤트 처리하기</span>
+            <span class="do-it">Do it 모달 박스 만들기</span>
+            <span>06-3 이벤트 객체</span>
+            <span class="do-it">Do it 자바스크립트로 캐러셀 만들기</span>
+            <span>06-4 이벤트 전파</span>
+          </div>
+          <div class="main-tab">
+            <span>07-1 DOM과 트리와 노드 리스트</span>
+            <span>07-2 웹문서에 새로운 노드 추가하기</span>
+            <span class="do-it">Do it 장바구니에 상품 추가하기</span>
+            <span class="do-it">Do it 시간에 따라 다른 이미지 표시하기</span>
+            <span>07-3 노드 삭제하기</span>
+            <span class="do-it">Do it 나만의 도서 목록 만들기</span>
+          </div>
+          <div class="main-tab">
+            <span>08-1 웹 브라우저의 최상위 객체, window</span>
+            <span>08-2 Date 객체 활용하기</span>
+            <span class="do-it">Do it 만 보 걷기, 오늘까지 며칠째일까?</span>
+            <span class="do-it">Do it 디지털 시계 만들기</span>
+            <span>08-3 Math 객체 활용하기</span>
+            <span class="do-it">Do it 웹 문서의 배경 이미지를 무작위로 변경하기 </span>
+          </div>
+          <div class="main-tab">
+            <span>09-1 객체 알아보기</span>
+            <span>09-2 생성자 함수와 클래스</span>
+            <span class="do-it">Do it 생성자 함수와 클래스를 사용해 원기둥의 부피 구하기</span>
+            <span>09-3 객체의 키와 값에 접근하기</span>
+            <span>09-4 프로토타입과 클래스에서의 상속</span>
+            <span class="do-it">Do it 프로토타입을 상속하는 새로운 객체 만들기</span>
+            <span class="do-it">Do it 클래스 상속 연습하기</span>
+          </div>
+          <div class="main-tab">
+            <span>10-1 문자열에 접근하기</span>
+            <span>10-2 문자열 메서드 활용하기</span>
+            <span class="do-it">Do it 보안을 위해 이메일 주소의 일부 감추기</span>
+            <span>10-3 정규 표현식으로 문자열 다루기</span>
+            <span>10-4 문자열과 배열 변환하기</span>
+            <span class="do-it">Do it 영문자열의 첫 번째 글자를 대문자로 바꾸기</span>
+            <span>10-5 똑똑하게 배열 사용하기</span>
+            <span>10-6 배열의 다양한 메서드 살펴보기</span>
+          </div>
+          <div class="main-tab">
+            <span>11-1 에크마스크립트 2015의 기능 복습하기</span>
+            <span>11-2 구조 분해 할당하기</span>
+            <span>11-3 배열을 변형하는 메서드</span>
+            <span>11-4 Map과 Set</span>
+            <span class="do-it">Do it 개설 요청 과목 정리하기</span>
+            <span>11-5 이터레이터와 제너레이터</span>
+            <span class="do-it">Do it 전철 노선도 만들기</span>
+          </div>
+          <div class="main-tab">
+            <span>12-1 HTTP 통신</span>
+            <span>12-2 JSON</span>
+            <span>12-3 서버에서 자료 가져오기</span>
+            <span class="do-it">Do it JSON 자료를 가져와서 화면에 표시하기1</span>
+            <span class="do-it">Do it JSON 자료를 가져와서 화면에 표시하기2</span>
+            <span>12-4 예외 처리하기</span>
+          </div>
+          <div class="main-tab">
+            <span>13-1 비동기 처리 방식</span>
+            <span>13-2 프로미스</span>
+            <span class="do-it">Do it 커피 주문하고 완료하는 프로피스 만들기</span>
+            <span class="do-it">Do it 프로미스를 반환하는 then()메서드 확인하기</span>
+            <span class="do-it">Do it 프로미스 체이닝으로 프로미스 연결하기</span>
+            <span>13-3 fetch API</span>
+            <span>13-4 async 함수와 await 예약어</span>
+            <span class="do-it">Do it 서버에서 회원 정보 가져와 표시하기 1</span>
+            <span class="do-it">Do it 서버에서 회원 정보 가져와 표시하기 2</span>
+          </div>
+          <div class="main-tab">
+            <span>14-1 캔버스 알아보기</span>
+            <span>14-2 캔버스에 기본 도형 그리기</span>
+            <span class="do-it">Do it 캔버스로 개구리 얼굴 그리고 파일로 저장하기</span>
+            <span>14-3 캔버스에 텍스트 그리기</span>
+            <span>14-4 캔버스에 이미지 표시하기</span>
+          </div>
+          <div class="main-tab">
+            <span>15-1 다양한 그래픽 스타일 지정하기</span>
+            <span class="do-it">Do it 나만의 드로잉 앱 만들기</span>
+            <span>15-2 그래픽 요소 변형하기</span>
+            <span class="do-it">Do it 버튼을 클릭할 때마다 도형 회전시키기</span>
+            <span>15-3 그래픽 요소 합성하기</span>
+          </div>
+          <div class="main-tab">
+            <span>16-1 객체를 사용해 도형 그리기</span>
+            <span class="do-it">Do it 무작위로 여러 개의 도형 그리기</span>
+            <span>16-2 애니메이션 효과 추가하기</span>
+            <span class="do-it">Do it 왔다 갔다 움직이는 원 만들기</span>
+            <span class="do-it">Do it 궤적이 남는 애니메이션 만들기</span>
+            <span class="do-it">Do it 여러 개의 도형이 무작위로 움직이는 애니메이션 만들기</span>
+          </div>
+          <div class="main-tab">
+            <span>17-1 API 알아보기</span>
+            <span>17-2 웹 스토리지 API</span>
+            <span class="do-it">Do it 웹 스토리지 다루기</span>
+            <span class="do-it">Do it 로컬 스토리지를 활용해 할 일 목록 프로그램 만들기</span>
+            <span>17-3 지오로케이션 API</span>
+          </div>
+          <div class="main-tab">
+            <span>18-1 공개 API 알아보기</span>
+            <span>18-2 지도 API 알아보기</span>
+            <span class="do-it">Do it 카카오맵 API를 사용하기 위한 API 키 받기</span>
+            <span class="do-it">Do it 지도에 이지스퍼블리싱의 위치 표시하기</span>
+            <span>18-3 '공공데이터포털'사이트 활용하기</span>
+            <span class="do-it">Do it 오픈 API의 활용 신청하기</span>
+            <span class="do-it">Do it 요청 변수와 응답 자료 살펴보기</span>
+            <span class="do-it">Do it 오픈 API를 활용해 자료 가져오기</span>
+            <span class="do-it">Do it 지도에 전국 캠핑장 표시하기</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-contents">
+        <!-- 하위를 비우고, 외부파일 삽입 -->
+        <div class="main-con-list">
+          <div class="main-con">
+            <h3 class="main-con-title">01-1 자바스크립트를 위한 기본 상식 : 17 - 19P</h3>
+            <iframe src="../01/date231204_comment.txt"></iframe>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">01-2 웹 개발에서 자바스크립트의 역할 : 20 - 25P</h3>
+            <div class="main-con-contents">
+              <a href="https://velog.io/@jennyfromdeblock/%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EC%99%80-%EC%84%9C%EB%B2%84-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%EA%B0%9C%EB%85%90%EC%9E%A1%EA%B8%B0"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">20P 클라이언트와 서버</a>
+              <a href="https://liahoneyblog.co.kr/javascript%EB%A1%9C-%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0/"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">21P 프런트엔드 개발과 자바스크립트
+                : 자바스크립트로 프론트엔드 개발하기</a>
+              <a href="https://dinfree.com/lecture/frontend/123_js_1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">21P 프런트엔드 개발과 자바스크립트
+                : 프레임워크 상세설명(Vue, Angular, React, Node.js)</a>
+              <a href="https://yozm.wishket.com/magazine/detail/2302/"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">21P 프런트엔드 개발과 자바스크립트
+                : 프론트엔드 로드맵과 프론트엔트 개발자가 하는 일</a>
+              <a href="https://yozm.wishket.com/magazine/detail/2088/"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">22P 백엔드 개발과 자바스크립트 :
+                백엔드 입문자를 위한 자바스크립트 생태계 </a>
+              <a href="https://www.samsungsds.com/kr/insights/typescript.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">23P 백엔드 개발과 자바스크립트 :
+                자바스크립트와 타입스크립트 </a>
+              <a href="about:blank"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">23P 콘솔창에서 자바 스크립트
+                사용하기 : Ctrl+Shift+I(Win) / Option+Commend+I(MAC)</a>
+              <a href="about:blank"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">25P 개발자 도구 창 열기 :
+                F12(크롬)</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">01-3 코드 작성을 위한 편집기 설정하기 : 26 - 33P</h3>
+            <div class="main-con-contents">
+              <a href="https://spartacodingclub.kr/blog/vscode"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">26P Visual Studio
+                Code 설치 및 사용법</a>
+              <a href="https://github.com/naver/d2codingfont"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">27P D2Coding(From
+                Naver)설치 주소
+              </a>
+              <a href="https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-%EC%BD%94%EB%94%A9%EC%97%90-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8F%84%EA%B5%AC-%EC%B6%94%EC%B2%9C"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">28P VS Code
+                확장프로그램</a>
+              <a href="https://stajun.tistory.com/entry/Visual-Studio-Code-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%84%9C%EB%B2%84Live-Server-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">30P VS Code 확장팩 설치하기
+                ① : Live Server
+              </a>
+              <a href="https://nuggy875.tistory.com/109"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">30P VS Code 확장팩 설치하기
+                ② : Prettier
+              </a>
+              <a href="https://dololak.tistory.com/730"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">31P VS Code 확장팩 설치하기
+                ③ : Material Theme
+              </a>
+              <a href="https://devmango.tistory.com/103"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">31P VS Code 확장팩 설치하기
+                ④ : Material Icon Theme
+              </a>
+              <a href="https://jaewonna.tistory.com/201"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">32P VS Code 프로젝트
+                폴더(항목) 추가 및 제거 방법
+              </a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">01-4 간단한 스크립트부터 시작하기 : 34 - 40P</h3>
+            <!-- <a href="../01/external-2.html" target='_blank'>외부스크립트</a> -->
+            <div class="main-con-contents">
+              <a href="../01/inline.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">34P 인라인스크립트 버튼을 클릭해서
+                알림 창 표시하기</a>
+              <a href="../01/internal.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">35P 내부 스크립트를 작성해
+                무작위로 문서의 배경색 바꾸기</a>
+              <a href="../01/external-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">37P 별도로 외부 스크립트 파일
+                저장하기 : Defer 사용하기</a>
+              <a href="../01/external-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">39P 웹 브라우저에서 스크립트
+                해석하기 : 개발자 도구(F12) > Souces에서 파일 확인하기</a>
+              <a href="https://m.blog.naver.com/on21life/221654555798"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">40P Use Strict
+                Mode</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">02-1 프로그램에서 입력받고 출력하는 방법 : 42 - 50P</h3>
+            <iframe src="../02/date231205_comment.txt"></iframe>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">02-2 프로그램과 친해지려면 변수부터 익히자 : 51 - 58P</h3>
+            <div class="main-con-contents">
+              <a href="../02/hoisting-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">55P 변수 호이스팅(var)</a>
+              <a href="../02/hoisting-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">56P 변수
+                호이스팅(let/const)</a>
+              <a href="../02/variable-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">57P 변수 재선언과
+                재할당(var)</a>
+              <a href="../02/variable-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">58P 변수 재선언과
+                재할당(let/const)</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">02-3 컴퓨터가 세상을 보는 방법, 자료형 : 59 - 72P</h3>
+            <div class="main-con-contents">
+              <a href="../02/data_type.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">자료형 살펴보기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">02-4 자바스크립트의 장점이자 단점, 자료형 변환 : 73 - 79P</h3>
+            <iframe src="../02/date231206_comment.txt"></iframe>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 실습 화씨온도를 섭씨온도로 변환하기 : 80 - 81P</h3>
+            <div class="main-con-contents">
+              <a href="../02/convert_celTofah.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">섭씨를 화씨로 변경하기</a>
+              <a href="../02/convert_fahTocel.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">화씨를 섭씨로 변경하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">마무리 문제 : 84P</h3>
+            <div class="main-con-contents">
+              <a href="../02/quiz-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제2 : 인치를 센티미터로
+                변경하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">심화학습(나이계산기)</h3>
+            <div class="main-con-contents">
+              <a href="../02/age_caluc.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">나이계산기 1
+              </a>
+              <a href="../02/age_caluc2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">나이계산기 2
+              </a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">03-1 프로그램 동작을 가르키는 기호, 연산자 : 86 - 91P</h3>
+            <div class="main-con-contents">
+              <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_operators"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;"> 표현식과 연산자
+              </a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">03-2 프로그램 흐름을 자유롭게 조절하는 조건문 : 92 - 102P</h3>
+            <div class="main-con-contents">
+              <a href="../03/conditional-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;"> 94P 프롬프트 창에서 [취소]
+                버튼을
+                클릭했는지 체크하기 1
+              </a>
+              <a href="../03/conditional-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;"> 95P 프롬프트 창에서 [취소]
+                버튼을
+                클릭했는지 체크하기 2
+              </a>
+              <a href="../03/conditional-3.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;"> 96P 학점계산하기
+              </a>
+              <a href="../03/subject.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">100P 신청과목체크하기
+              </a>
+              <a href="../03/logical.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">101P 입력한 숫자가 모두 짝수인지
+                체크하기
+              </a>
+            </div>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 짝수와 홀수를 구별하는 프로그램 만들기 : 98 - 99P</h3>
+            <div class="main-con-contents">
+              <a href="../03/even-result.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">짝수와 홀수를 구별하는 프로그램
+                만들기
+              </a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">03-3 같은 동작을 손쉽게 반복하는 반복문 : 103 - 110P</h3>
+            <div class="main-con-contents">
+              <a href="../03/for.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">104P for 문을 사용해 배열 값
+                가져오기</a>
+              <a href="../03/foreach.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">105P for Each 문으로
+                배열 값
+                가져오기</a>
+              <a href="../03/forin.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">106P for ...in 문으로
+                키와 값 가져오기
+              </a>
+              <a href="../03/forOf.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">107P for ...of 문으로
+                배열 값 가져오기
+              </a>
+              <a href="../03/while.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">108P while 문으로 조건에
+                따라 별 표시하기
+              </a>
+              <a href="../03/dowhile.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">108P do...while 문으로
+                조건에 따라 별 표시하기
+              </a>
+            </div>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 소수인지의 여부 확인하기 : 110 - 112P</h3>
+            <div class="main-con-contents">
+              <a href="../03/prime-result.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">소수인지의 여부 확인하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">마무리 문제 : 113P</h3>
+            <div class="main-con-contents">
+              <a href="../03/solution-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제1 : 주어진 배열에서
+                10보다 큰 값을 찾아 화면에 표시하기</a>
+              <a href="../03/solution-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제2 : 사용자로부터
+                입력받은 숫자 중 짝수만 더해 표시하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">심화학습(조건문 심화, 마무리 문제 응용)</h3>
+            <div class="main-con-contents">
+              <a href="../03/conditional-prt.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">나이를 입력받아 연령층
+                알려주기</a>
+              <a href="../03/quiz-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제1 : 주어진 배열에서
+                10보다 큰 값을 찾아 화면에 표시하기</a>
+              <a href="../03/quiz-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제2 : 사용자로부터
+                입력받은 숫자 중 짝수만 더해 표시하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">04-1 프로그래밍의 꽃, 함수 : 115 - 122P</h3>
+            <div class="main-con-contents">
+              <a href="../04/add-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">117P 1부터 10까지 더하는 함수
+                실행하기</a>
+              <a href="../04/add-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">119P 매개변수와 인수를 사용해
+                1부터 n까지 더하기</a>
+              <a href="../04/add-3.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">120P return문을 사용해
+                재사용할 수 있는 함수 만들기</a>
+              <a href="../04/example-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">121P 두 수를 받아 곱하는 함수에
+                10과 20을 넣어 결과 출력하기</a>
+              <a href="../04/multiple.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">122P 매개변수의 기본값 지정하기
+              </a>
+            </div>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 웹 개발자 도구 창의 디버깅 기능 살펴보기 : 122 - 125P</h3>
+            <div class="main-con-contents">
+              <a href="https://ko.javascript.info/debugging-chrome"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">크롬 웹 개발자 도구창에서
+                디버깅하기(Source탭)
+                1</a>
+              <a href="https://mainia.tistory.com/2801"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">크롬 웹 개발자 도구창에서
+                디버깅하기(Source탭)
+                2</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">04-2 변수의 유효범위, 스코프 : 126 - 137P</h3>
+            <div class="main-con-contents">
+              <a href="../04/scope-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">127P 지역스코프 변수를 범위
+                외에서
+                콜링하기(결과는 콘솔창을 띄워 확인하세요 : Reference Error)</a>
+              <a href="../04/scope-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">127P 전역변수 사용하기1</a>
+              <a href="../04/scope-3.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">128P 전역변수 사용하기2</a>
+              <a href="../04/scope-4.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">128P 전역변수 사용하기3</a>
+              <a href="../04/scope-5.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">129P 블록 스코프 오류
+                확인하기</a>
+              <a href="../04/scope-6.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">130P 블록 스코프를 고려해서
+                작성하기</a>
+
+            </div>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 웹 개발자 도구 창에서 스코프 확인하기 130 - 137P</h3>
+            <div class="main-con-contents">
+              <a href="../04/scope.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">131P var 변수의 전역 스코프와
+                지역스코프</a>
+
+              <a href="../04/scope-result.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">134P let/const 변수의
+                스크립트 스코프와 블록 스코프</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">04-3 이름 없이 사용하는 함수 표현식 : 138 - 147P</h3>
+            <div class="main-con-contents">
+              <a href="../04/add-4.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">138P 익명 함수 선언 및
+                실행하기</a>
+              <a href="../04/add-5.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">139P 즉시 실행 함수</a>
+              <a href="../04/example-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">141P 두 수를 받아 곱하는 화살표
+                함수를 작성하고
+                10과 20을 넣어 결과 출력하기</a>
+              <a href="../04/callback-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">142P 콜백 함수 사용하기</a>
+              <a href="../04/callback-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">142P 함수에서 콜백 함수 정의하고
+                사용하기</a>
+              <a href="../04/citizen-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">145P 일급시민의 조건 : ①
+                변수에 함수
+                할당하기</a>
+              <a href="../04/citizen-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">146P 일급시민의 조건 : ②
+                함수를 다른
+                함수로
+                전달하기</a>
+              <a href="../04/citizen-3.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">147P 일급시민의 조건 : ③
+                init()
+                함수에서 다른
+                함수 반환하기</a>
+            </div>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 입력값을 표시하는 콜백 함수 만들기 : 143 - 145P</h3>
+            <div class="main-con-contents">
+              <a href="../04/callback.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">콜백함수1</a>
+              <a href="../04/callback-result.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">콜백함수2</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">04-4 전개구문</h3>
+            <div class="main-con-contents">
+              <a href="../04/rest.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">148P 전개 구문의 작성방법</a>
+              <a href="../04/rest-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">149P 나머지 매개변수의 활용1 :
+                인수의 개수와 상관없이
+                숫자를 더하는 프로그램</a>
+              <a href="../04/rest-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">150P 나머지 매개변수의 활용2
+                : 인수의 일부분만 나머지
+                매개변수로 받기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">04-5 시간을 고려하는 타이머 함수 : 151 - 154P</h3>
+            <div class="main-con-contents">
+              <a href="../04/timer-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">151P 일정 시간마다
+                반복하기(setInterval()) : 2초마다 인사말 표시하기(콘솔확인)</a>
+              <a href="../04/timer-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">152P 반복 실행
+                멈추기(clearInterval()) : 타이머 종료하기(콘솔확인)</a>
+              <a href="../04/timer-3.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">153P 특정 시간 이후에
+                실행하기(setTimeout()) : 3초후에 인사말 표시하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">마무리 문제 : 155 - 156P</h3>
+            <div class="main-con-contents">
+              <a href="../04/solution-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제1 : 입력받은 숫자의
+                음수/양수 및 0 여부 판별</a>
+              <a href="../04/solution-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제2 : 입력받은 두 수의
+                최대공약수 구하기</a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">심화학습(마무리 문제 응용)</h3>
+            <div class="main-con-contents">
+              <a href="../04/quiz-1.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제1 : 입력받은 숫자의
+                음수/양수 및 0 여부 판별
+              </a>
+              <a href="../04/quiz-2.html"
+                onclick="window.open(this.href, '_blank', 'width=1000, height=800'); return false;">마무리 문제2 : 입력받은 두 수의
+                최대공약수 구하기
+              </a>
+            </div>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">05-1 DOM과 DOM 트리</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">05-2 웹요소의 접근하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">05-3 자바스크립트로 스타일 수정하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">05-4 DOM에서 폼 다루기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">06-1 이벤트 알아보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">06-2 이벤트 처리하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 모달 박스 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">06-3 이벤트 객체</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 자바스크립트로 캐러셀 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">06-4 이벤트 전파</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">07-1 DOM과 트리와 노드 리스트</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">07-2 웹문서에 새로운 노드 추가하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 장바구니에 상품 추가하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 시간에 따라 다른 이미지 표시하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">07-3 노드 삭제하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 나만의 도서 목록 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">08-1 웹 브라우저의 최상위 객체, window</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">08-2 Date 객체 활용하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 만 보 걷기, 오늘까지 며칠째일까?</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 디지털 시계 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">08-3 Math 객체 활용하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 웹 문서의 배경 이미지를 무작위로 변경하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">09-1 객체 알아보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">09-2 생성자 함수와 클래스</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 생성자 함수와 클래스를 사용해 원기둥의 부피 구하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">09-3 객체의 키와 값에 접근하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">09-4 프로토타입과 클래스에서의 상속</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 프로토타입을 상속하는 새로운 객체 만들기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 클래스 상속 연습하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-1 문자열에 접근하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-2 문자열 메서드 활용하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 보안을 위해 이메일 주소의 일부 감추기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-3 정규 표현식으로 문자열 다루기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-4 문자열과 배열 변환하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 영문자열의 첫 번째 글자를 대문자로 바꾸기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-5 똑똑하게 배열 사용하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">10-6 배열의 다양한 메서드 살펴보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">11-1 에크마스크립트 2015의 기능 복습하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">11-2 구조 분해 할당하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">11-3 배열을 변형하는 메서드</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">11-4 Map과 Set</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 개설 요청 과목 정리하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">11-5 이터레이터와 제너레이터</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 전철 노선도 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">12-1 HTTP 통신</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">12-2 JSON</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">12-3 서버에서 자료 가져오기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it JSON 자료를 가져와서 화면에 표시하기1</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it JSON 자료를 가져와서 화면에 표시하기2</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">12-4 예외 처리하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">13-1 비동기 처리 방식</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">13-2 프로미스</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 커피 주문하고 완료하는 프로피스 만들기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 프로미스를 반환하는 then()메서드 확인하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 프로미스 체이닝으로 프로미스 연결하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">13-3 fetch API</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">13-4 async 함수와 await 예약어</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 서버에서 회원 정보 가져와 표시하기 1</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 서버에서 회원 정보 가져와 표시하기 2</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">14-1 캔버스 알아보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">14-2 캔버스에 기본 도형 그리기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 캔버스로 개구리 얼굴 그리고 파일로 저장하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">14-3 캔버스의 텍스트 그리기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">14-4 캔버스에 이미지 표시하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">15-1 다양한 그래픽 스타일 지정하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 나만의 드로잉 앱 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">15-2 그래픽 요소 변형하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 버튼을 클릭할 때마다 도형 회전시키기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">15-3 그래픽 요소 합성하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">16-1 객체를 사용해 도형 그리기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 무작위로 여러 개의 도형 그리기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">16-2 애니메이션 효과 추가하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 왔다 갔다 움직이는 원 만들기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 궤적이 남는 애니메이션 만들기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 여러 개의 도형이 무작위로 움직이는 애니메이션 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">17-1 API 알아보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">17-2 웹 스토리지 API</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 웹 스토리지 다루기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 로컬 스토리지를 활용해 할 일 목록 프로그램 만들기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">17-3 지오로케이션 API</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">18-1 공개 API 알아보기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">18-2 지도 API 알아보기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 카카오맵 API를 사용하기 위한 API 키 받기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 지도에 이지스퍼블리싱의 위치 표시하기</h3>
+          </div>
+          <div class="main-con">
+            <h3 class="main-con-title">18-3 '공공데이터포털'사이트 활용하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 오픈 API의 활용 신청하기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 요청 변수와 응답 자료 살펴보기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 오픈 API를 활용해 자료 가져오기</h3>
+          </div>
+          <div class="main-con do-it">
+            <h3 class="main-con-title">Do it 지도에 전국 캠핑장 표시하기</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <span class="body-section-divide">footer</span>
+    <h1>[산업구조변화대응특화훈련]</h1>
+    <h2>뷰(Vue.js)를 활용한 프로그레시브 웹 앱(PWA) 개발자 양성과정</h2>
+    <h3>Part.2 JavaScript&Vue Coding Class for making Web/App</h3>
+  </footer>
+</body>
+
+</html>
