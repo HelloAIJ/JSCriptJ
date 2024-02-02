@@ -5,29 +5,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>웹 요소에 접근하기</title>
+  <title>170P DOM 요소 내용과 속성 수정하기</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-
-  </header>
-  <main>
-    <h1 id="title">My Profile</h1>
-    <div id="profile">
-      <img src="images/pf.png" alt="도레미">
-      <div id="desc">
-        <p class="user">이름 : 도레미</p>
-        <p class="user">주소 : somewhere</p>
-        <p class="user">연락처 : 1234-5678</p>
+  <h1>DOM의 기초 : 웹 요소에 접근하기</h1>
+  <h2>웹 요소의 내용을 가져오고 수정하기</h2>
+  <p class="desc_contents">
+    <span class="desc_title">기본형</span>
+    <span class="desc_ex">① 웹요소.innerText=내용</span>
+    <span class="desc_ex">② 웹요소.innerHtml=내용</span>
+    <span class="desc_ex">③ 웹요소.textContent=내용</span>
+    <span class="desc_ex ex_main">※ 이미지 요소.src=이미지 파일</span>
+  </p>
+  <h3>웹 요소의 내용 수정하기 : DOM 요소 내용과 속성 수정하기</h3>
+  <h4>(콘솔도구로 확인하기)</h4>
+  <div class="flex-container">
+    <div class="flex-item">
+      <h1 id="title">My Profile(클릭하세요)</h1>
+      <div>
+        <div id="profile">
+          <div>
+            <img src="images/pf.png" alt="도레미">
+            <p class="img_clicked">(그림클릭)</p>
+          </div>
+          <div id="desc">
+            <p class="user first_user">이름 : 도레미(클릭하세요)</p>
+            <p class="user other_user_on">주소 : somewhere</p>
+            <p class="user other_user_on">연락처 : 1234-5678</p>
+          </div>
+        </div>
+        <div class="ex_desc">
+          <span class="ex_title">내용을 수정하는 함수</span>
+          <span class="ex_title_sub">(자세한 내용은 개발자 도구 Sorces에서 js파일 참조)</span>
+          <span class="ex_ex">- 변수.onclick=함수</span>
+          <span class="ex_ex">-
+            title.onclick=function{title.innerText="프로필";}</span>
+          <span class="ex_ex">- 화살표함수로 줄여쓰기 :
+            title.conclick=()=>title.innerText="프로필";</span>
+          <span class="ex_ex">- 삼항 연산자를 사용하여 텍스트 토글도
+            가능</span>
+          <span class="ex_ex highlight">title.onclick = () =>
+            title.innerText = title.innerText === "My Profile" ? "프로필" : "My Profile";</span>
+        </div>
       </div>
     </div>
+
     <script src="js/js-content-2.js"></script>
-  </main>
-  <footer>
-  </footer>
+  </div>
 </body>
 
 </html>

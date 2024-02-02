@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS로 스타일 바꾸기</title>
+  <title>172P CSS 속성 수정하기(1분복습)</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <h1 id="title">My Profile</h1>
-  <div id="profile">
-    <img src="images/pf.png" alt="도레미">
-    <div id="desc">
-      <p class="user">이름 : 도레미</p>
-      <p class="user">주소 : somewhere</p>
-      <p class="user">연락처 : 1234-5678</p>
-    </div>
-  </div>
 
-  <script src="js/js-css-2.js"></script>
+<body>
+  <h1>DOM의 기초 : 자바스크립트로 스타일 수정하기</h1>
+  <h2>CSS 속성에 접근하고 수정하기(1분복습)</h2>
+  <h3>'이름:도레미'를 클릭하면 스타일 속성이 변경되게 하기</h3>
+  <!-- <h4>(콘솔도구로 확인하기)</h4>
+  <p style="width: 240px; padding: 0 200px; font-size: 16px; color:blue;">
+    <span style="font-weight: bold;">기본형</span><br>
+    <span style="display: block; text-align:left;">① 웹요소.innerText=내용</span>
+    <span style="display: block; text-align:left;">② 웹요소.innerHtml=내용</span>
+    <span style="display: block; text-align:left;">③ 웹요소.textContent=내용</span><br>
+    <span style="display: block; text-align:left;">※ 이미지 요소.src=이미지 파일</span>
+  </p> -->
+  <div class="flex-container">
+    <div class="flex-item">
+      <h1 id="title">My Profile</h1>
+      <div>
+        <div id="profile">
+          <div><img src="images/pf.png" alt="도레미"></div>
+          <div id="desc">
+            <p class="user first_user">이름 : 도레미(클릭하세요)</p>
+            <p class="user other_user">주소 : somewhere</p>
+            <p class="user other_user">연락처 : 1234-5678</p>
+          </div>
+        </div>
+        <div>
+          <span class="ex_title">내용을 수정하는 함수</span>
+          <span class="ex_title_sub">(자세한 내용은 개발자 도구 Sorces에서 js파일 참조)</span>
+          <span class="ex_ex">const userName = document.querySelector("#desc p");</span>
+          <span class="ex_ex">userName.onclick = () => {</span>
+          <span class="ex_ex">userName.style.color = "red";</span>
+          <span class="ex_ex highlight-add"> 변화를 보기위해 글씨색 변경(기본)</span>
+          <span class="ex_ex">userName.style.fontWeight = "bold";</span>
+          <span class="ex_ex highlight-add"> 변화를 보기위해 font-weight, bold로 추가</span>
+          <span class="ex_ex highlight">userName.style.fontSize = "18px";</span>
+          <span class="ex_ex highlight-add"> 변화를 보기위해 font-size 18px로 수정(css .user의 font-size 기본속성이 16px임)</span>
+          <span class="ex_ex">}</span>
+        </div>
+      </div>
+    </div>
+    <script src="js/js-css-2.js"></script>
+  </div>
 </body>
+
 </html>

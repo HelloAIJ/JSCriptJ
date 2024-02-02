@@ -1,3 +1,4 @@
+// 176P
 const title = document.querySelector("#title");
 
 // .classList.toggle(클래스명) 대상 클래스를 넣다/뺐다

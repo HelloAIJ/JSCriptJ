@@ -2,11 +2,9 @@ h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-.clicked {
-  background-color: yellow;
-}
 #profile {
-  display: flex;
+  display: inline-flex;
+  width: 400px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -17,19 +15,59 @@ h1 {
 #desc {
   margin: 10px 20px;
 }
-p {
-  font-size: 0.8rem;
-  line-height: 1.8;
+.clicked_highlight {
+  width: 240px;
+  height: 15px;
+  text-align: center;
+  background-color: yellow;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 15px;
+  margin: 0;
+}
+.clicked {
+  /* text-align: center; */
+  background-color: yellow;
+  color: blue;
+}
+.user_classlist {
+  width: 240px;
+  height: 20px;
+  color: blueviolet;
+  text-align: left;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px;
 }
 .user {
-  color: blueviolet;
+  width: 240px;
+  height: 20px;
+  color: black;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 5px;
 }
+
 .blue-italic {
   background-color: #8ddfff;
   font-style: italic;
 }
+.flex-item {}
+.tab {
+  margin: 20px 0
+}
 .tab > span {
+  display: inline-block;
   border: 1px solid #ccc;
+  width: 45px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
 }
 
 .tab > span.on {
@@ -37,8 +75,135 @@ p {
 }
 .con > span {
   display: none;
+  height: 190px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  line-height: 180px;
 }
 .con > span.on {
   display: block;
 
+}
+.flex-container {
+  display: inline-flex;
+  gap: 100px
+}
+text {
+  text-decoration: underline;
+  color: red;
+
+}
+.desc_contents {
+  width: 260px;
+  padding: 0 200px;
+  font-size: 16px;
+  color: blue;
+}
+.desc_title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.desc_ex {
+  display: block;
+  text-align: left;
+}
+.ex_main {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.other_user_on {
+  color: black;
+}
+.other_user_off {
+  display: none;
+}
+.ex_title {
+  display: block;
+  font-weight: bold;
+}
+.ex_title_sub {
+  display: block;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.ex_ex {
+  display: block;
+  text-align: left;
+  padding-left: 40px;
+  color: blue
+}
+.highlight {
+  font-weight: bold;
+}
+.highlight-add {
+  color: red;
+  font-size: 12px;
+  /* text-decoration: underline; */
+
+}
+.id_desc_box {
+  border: 1px solid #ccc;
+}
+.img_clicked {
+  width: 70px;
+  font-size: 12px;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: bold;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+#toggle-box button {
+  border-radius: 5px;
+}
+#contents {
+  width: 600px;
+  padding: 20px;
+  border: 1px dotted #666;
+  border-radius: 25px;
+  margin: 50px;
+}
+.contents_desc {
+  width: 500px;
+  margin: 0 auto;
+}
+.contents_desc span {
+  display: block;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 5px;
+}
+.dark h1 {
+  color: #ccc;
+}
+.dark h2 {
+  color: #ccc;
+}
+.dark h3 {
+  color: #ccc;
+}
+.dark .desc_contents {
+  padding: 30px 120px;
+  color: #ddd;
+}
+.dark .desc_contents {
+
+  background-color: #252525;
+}
+.dark .contents_desc {
+  background-color: #333;
+}
+.dark .contents_desc span {
+  color: #ddd;
+}
+.dark #contents {
+  border: 1px dotted #eee;
 }

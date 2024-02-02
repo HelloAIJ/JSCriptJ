@@ -2,6 +2,7 @@ const bttn = document.querySelector("button");
 
 bttn.onclick = function () {
   document.body.classList.toggle("dark");
+  bttn.innerText = bttn.innerText === "다크 모드로 바꾸기" ? "원래 모드로 돌아가기" : "다크 모드로 바꾸기";
 };
 
 // css 설계 시 최상위 부모의 class를 변경하는 방법으로 접근한다.

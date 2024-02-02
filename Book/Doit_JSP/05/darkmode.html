@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>다크 모드로 바꾸기</title>
-  <link rel="stylesheet" href="css/darkmode.css">
+  <title>176P 다크모드</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div id="toggle-box">
-    <button>다크 모드로 바꾸기</button>   
-  </div>
+  <h1>DOM의 기초 : 자바스크립트로 스타일 수정하기</h1>
+  <h2>클래스 스타일 추가하고 삭제하기</h2>
+  <p class="desc_contents">
+    <span class="desc_title">기본형</span>
+    <span class="desc_ex">요소.classList.add(클래스명)</span>
+    <span class="desc_ex">요소.classList.remove(클래스명)</span>
+    <span class="desc_ex">요소.classList.contains(클래스명)</span>
+    <span class="desc_ex ex_main">요소.classList.toggle(클래스명)</span>
+  </p>
+  <h3>클래스 스타일 토글하기 : 다크모드 토글</h3>
+  <!-- <h4>(콘솔도구로 확인하기)</h4> -->
 
-  <div id="contents">
-    <p>classList와 toggle 메서드를 사용하면 필요한 스타일을 껐다 켰다할 수 있기 때문에 다양하게 활용할 수 있습니다. </p>
-    <p>오른쪽 위에 있는 버튼을 클릭할 때마다 다크 모드, 또는 라이트 모드로 바뀝니다.</p>  
+  <div class="flex-container">
+    <div class="flex-item">
+      <div id="toggle-box">
+        <button>다크 모드로 바꾸기</button>
+      </div>
+      <div id="contents">
+        <p class="contents_desc">
+          <span> classList와 toggle 메서드를 사용하면</span>
+          <span> 필요한 스타일을 껐다 켰다할 수 있기 때문에</span>
+          <span> 다양하게 활용할 수 있습니다.</span>
+        </p>
+        <p class="contents_desc">
+          <span> 위에 있는 버튼을 클릭할 때마다</span>
+          <span> 다크 모드/라이트 모드로 바뀝니다.</span>
+        </p>
+      </div>
+    </div>
+    <script src="js/darkmode.js"></script>
   </div>
-
-  <script src="js/darkmode.js"></script>
 </body>
+
 </html>

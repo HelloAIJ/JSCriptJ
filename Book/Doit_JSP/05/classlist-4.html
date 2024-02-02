@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>classList 활용하기</title>
+  <title>176P 클래스 스타일 토글하기(1분복습)</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <h1 id="title">My Profile</h1>
-  <div id="profile">
-    <img src="images/pf.png" alt="도레미">
-    <div id="desc">
-      <p class="user">이름 : 도레미</p>
-      <p class="user">주소 : somewhere</p>
-      <p class="user">연락처 : 1234-5678</p>
-    </div>
-  </div>
 
-  <script src="js/classlist-4.js"></script>
+<body>
+  <h1>DOM의 기초 : 자바스크립트로 스타일 수정하기</h1>
+  <h2>클래스 스타일 추가하고 삭제하기(1분복습)</h2>
+  <p class="desc_contents">
+    <span class="desc_title">기본형</span>
+    <span class="desc_ex">요소.classList.add(클래스명)</span>
+    <span class="desc_ex">요소.classList.remove(클래스명)</span>
+    <span class="desc_ex">요소.classList.contains(클래스명)</span>
+    <span class="desc_ex ex_main">요소.classList.toggle(클래스명)</span>
+  </p>
+  <h3>클래스 스타일 토글하기 : style css의 .blue-italic 스타일을 가지고 '이름:도레미'에 토글 적용하기 </h3>
+  <!-- <h4>(콘솔도구로 확인하기)</h4> -->
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <h1 id="title">My Profile(클릭하세요)</h1>
+      <div>
+        <div id="profile">
+          <div><img src="images/pf.png" alt="도레미"></div>
+          <div id="desc" class="id_desc_box">
+            <!-- <p class="user"
+              style="background-color: yellow; color: red; width: 200px; height: 20px; font-size: 16px; line-height: 20px; font-weight: bold; margin: 0; padding: 5px;">
+              클릭
+            </p> -->
+            <p class="user_classlist user first_user">이름 : 도레미</p>
+            <p class="user_classlist user other_user">주소 : somewhere</p>
+            <p class="user_classlist user other_user">연락처 : 1234-5678</p>
+          </div>
+        </div>
+        <!-- <div>
+          <span style="font-weight: bold;">내용을 수정하는 함수</span><br>
+          <span>(자세한 내용은 개발자 도구 Sorces에서 js파일 참조)</span><br><br>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">const userName =
+            document.querySelector("#desc p");
+
+          </span><br>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">userName.onclick = () => {
+
+          </span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; "> userName.style.color =
+            "red";<text> 변화를 보기위해 글씨색 변경(기본)</text>
+
+          </span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; font-weight: bold;">
+            userName.style.fontWeight = "bold";<text> 변화를 보기위해 글씨
+              진하게(추가)</text>
+            <br></span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; font-weight: bold;">
+            userName.style.fontSize = "16px";<text> 변화를 보기위해 글씨크기 키움(추가)</text>
+            <br></span>
+
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">
+            }
+          </span>
+        </div> -->
+        <div>
+          <span class="ex_title">스타일을 수정하는 함수는 개발자 도구 Sorces에서 js파일을 참조해주세요.</span>
+        </div>
+      </div>
+    </div>
+    <script src="js/classlist-4.js"></script>
+  </div>
 </body>
+
 </html>

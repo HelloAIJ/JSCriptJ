@@ -5,42 +5,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile</title>
+  <title>167P 웹 요소의 내용 가져오기</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- 탭기능 연습 -->
-  <div class="tab">
-    <span>탭1</span>
-    <span>탭2</span>
-    <span>탭3</span>
-    <span>탭4</span>
-    <span>탭5</span>
-    <span>탭6</span>
-    <span>탭7</span>
-  </div>
-  <div class="con">
-    <span>박스1</span>
-    <span>박스2</span>
-    <span>박스3</span>
-    <span>박스4</span>
-    <span>박스5</span>
-    <span>박스6</span>
-    <span>박스7</span>
-  </div>
-  <div></div>
-  <h1>My Profile</h1>
-  <div id="profile">
-    <img src="images/pf.png" alt="도레미">
-    <div id="desc">
-      <p class="user">이름 : 도레미</p>
-      <p class="user" style="display:none">주소 : somewhere</p>
-      <p class="user" style="display:none">연락처 : 1234-5678</p>
+  <h1>DOM의 기초 : 웹 요소에 접근하기</h1>
+  <h2>웹 요소의 내용을 가져오고 수정하기</h2>
+  <p class="desc_contents">
+    <span class="desc_title">기본형</span>
+    <span class="desc_ex">① 웹요소.innerText</span>
+    <span class="desc_ex">② 웹요소.innerHtml</span>
+    <span class="desc_ex">③ 웹요소.textContent</span>
+  </p>
+  <h3>웹 요소의 내용 가져오기</h3>
+  <h4>(콘솔도구로 확인하기)</h4>
+  <div class="flex-container">
+    <div class="flex-item">
+      <h1>My Profile</h1>
+      <div>
+        <div id="profile">
+          <div><img src="images/pf.png" alt="도레미"></div>
+          <div id="desc">
+            <p class="user first_user">이름 : 도레미</p>
+            <p class="user other_user_off">주소 : somewhere</p>
+            <p class="user other_user_off">연락처 : 1234-5678</p>
+          </div>
+        </div>
+        <div class="ex_desc">
+          <span class="ex_title">콘솔창에 입력해보세요.</span>
+          <span class="ex_ex">document.querySelector("#desc").innerText</span>
+          <span class="ex_ex">document.querySelector("#desc").innerHTML</span>
+          <span class="ex_ex">document.querySelector("#desc").textContent</span>
+        </div>
+      </div>
     </div>
+    <div class="flex-item">
+      <h1>Plus. 탭기능 연습</h1>
+      <div class="tab">
+        <span>탭1</span>
+        <span>탭2</span>
+        <span>탭3</span>
+        <span>탭4</span>
+        <span>탭5</span>
+        <span>탭6</span>
+        <span>탭7</span>
+      </div>
+      <div class="con">
+        <span>박스1</span>
+        <span>박스2</span>
+        <span>박스3</span>
+        <span>박스4</span>
+        <span>박스5</span>
+        <span>박스6</span>
+        <span>박스7</span>
+      </div>
+    </div>
+    <script src="js/js-content-1.js"></script>
   </div>
-  <script src="js/jscontent-1.js"></script>
 </body>
 
 </html>

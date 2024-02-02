@@ -1,22 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>classList 활용하기</title>
+  <title>173P classList 프로퍼티 살펴보기</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1 id="title">My Profile</h1>
-  <div id="profile">
-    <img src="images/pf.png" alt="도레미">
-    <div id="desc">
-      <p class="user clicked">이름 : 도레미</p>
-      <p class="user">주소 : somewhere</p>
-      <p class="user">연락처 : 1234-5678</p>
+  <h1>DOM의 기초 : 자바스크립트로 스타일 수정하기</h1>
+  <h2>classList 프로퍼티 살펴보기</h2>
+  <!-- <h3>classList 프로퍼티 살펴보기</h3> -->
+  <!-- <h4>(콘솔도구로 확인하기)</h4>
+  <p style="width: 240px; padding: 0 200px; font-size: 16px; color:blue;">
+    <span style="font-weight: bold;">기본형</span><br>
+    <span style="display: block; text-align:left;">① 웹요소.innerText=내용</span>
+    <span style="display: block; text-align:left;">② 웹요소.innerHtml=내용</span>
+    <span style="display: block; text-align:left;">③ 웹요소.textContent=내용</span><br>
+    <span style="display: block; text-align:left;">※ 이미지 요소.src=이미지 파일</span>
+  </p> -->
+  <div class="flex-container">
+    <div class="flex-item">
+      <h1 id="title">My Profile</h1>
+      <div>
+        <div id="profile">
+          <div><img src="images/pf.png" alt="도레미"></div>
+          <div id="desc">
+            <p class="user_classlist first_user clicked">이름 : 도레미</p>
+            <p class="user_classlist other_user">주소 : somewhere</p>
+            <p class="user_classlist other_user">연락처 : 1234-5678</p>
+          </div>
+        </div>
+        <!-- <div>
+          <span style="font-weight: bold;">내용을 수정하는 함수</span><br>
+          <span>(자세한 내용은 개발자 도구 Sorces에서 js파일 참조)</span><br><br>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">const userName =
+            document.querySelector("#desc p");
+
+          </span><br>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">userName.onclick = () => {
+
+          </span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; "> userName.style.color =
+            "red";<text> 변화를 보기위해 글씨색 변경(기본)</text>
+
+          </span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; font-weight: bold;">
+            userName.style.fontWeight = "bold";<text> 변화를 보기위해 글씨
+              진하게(추가)</text>
+            <br></span>
+          <span style="display: block; text-align:left; padding-left:40px; color:blue; font-weight: bold;">
+            userName.style.fontSize = "16px";<text> 변화를 보기위해 글씨크기 키움(추가)</text>
+            <br></span>
+
+          <span style="display: block; text-align:left; padding-left:40px; color:blue;">
+            }
+          </span>
+        </div> -->
+        <div>
+          <span class="ex_title">콘솔창에 입력해보세요.</span>
+          <span class="ex_ex">document.querySelector("#desc p").classList</span>
+        </div>
+      </div>
     </div>
+    <!-- <script src="js/classlist-1.js"></script> -->
   </div>
 </body>
+
 </html>
