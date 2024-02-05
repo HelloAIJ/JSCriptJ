@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/login.css">
-	<title>회원 가입</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <title>181P 폼 배열을 사용해 폼 요소에 접근하기(회원 가입폼)</title>
 </head>
+
 <body>
-	<div id="container">
-    <h3>로그인</h3>
-    <form>
-      <div id="login_input">
-        <input type="text" autofocus placeholder="아이디">
-        <input type="password" placeholder="비밀번호">
-      </div>
-      <div id="login_bttn">
-        <button type="submit" class="order">로그인</button>
-      </div>
-    </form>
-	</div>
+  <h1>DOM의 기초 : DOM에서 폼 다루기</h1>
+  <h2>폼 요소에 접근하고 값을 가져오는 방법(1분복습)</h2>
+  <p class="desc_contents">
+    <!-- <span class="desc_title">기본형 : 요소.value</span> -->
+    <span>폼 요소에 id나 class, name 속성까지 없으면</span>
+    <span>폼 배열을 사용해 폼 요소에 접근할 수 있음</span>
+  </p>
+  <p class="desc_contents point">
+    <span>document의 속성 중 forms 속성은 form 태그를 배열처럼 저장하는데</span>
+    <span>이는 문서에 form이 두개 이상일 수 있기 때문이다.</span>
+  </p>
+  <p class="desc_contents point">
+    <span>또한, form안에 모든 요소를 가져오려면, </span>
+    <span>elements 속성과 함께 사용한다.</span>
+  </p>
+  <h3>폼 배열을 사용해 폼 요소에 접근하기(회원가입폼)</h3>
+  <h4>(콘솔도구로 확인하기)</h4>
+  <p class="h4_desc">
+    <span>웹 개발자 도구 > [요소(Elements)]탭 클릭 후, 태그 확인한 후</span>
+    <span class="point">콘솔창에 document.forms를 입력하면 ▼ HTML Collection이라고 표시됨</span>
+    <span>▶ HTMLCollection을 클릭하면 1개의 form 요소가 있으며,</span>
+    <span>아랫쪽에 ▶ 를 계속해서 따라가면 안쪽에 저장된 배열을 확인 할 수 있다.</span>
+    <span class="point">폼에 접근한 후 그 안에 있는 요소들은 elements 속성을 사용한다.</span>
+    <span class="point">document.forms[0].elements</span>
+    <span>해당 결과값에서 id 필드에 접근하려면, id 필드가 첫번째([0]) 요소이므로</span>
+    <span class="point">document.forms[0].elements[0]</span>
+    <span>이런 식으로 폼 요소를 사용해 id 필드에 접근할 수 있다.</span>
+    <span class="point">document.forms[0].elements[0].value</span>
+    <span>입력한 값을 콘솔에서 확인 할 수 있다.</span>
+  </p>
+  <fieldset>
+    <div id="container">
+      <h3>로그인</h3>
+      <form>
+        <div id="login_input">
+          <input type="text" autofocus placeholder="아이디">
+          <input type="password" placeholder="비밀번호">
+        </div>
+        <div id="login_bttn">
+          <button type="submit" class="order">로그인</button>
+        </div>
+      </form>
+    </div>
+  </fieldset>
 </body>
+
 </html>
