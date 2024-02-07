@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>183P 선택 목록을 구현한 소스 확인하기</title>
+	<title>186P 라디오 버튼과 체크 박스에 접근하기</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/getForm.css">
@@ -13,31 +13,13 @@
 
 <body>
 	<h1>DOM의 기초 : DOM에서 폼 다루기</h1>
-	<h2>선택 목록과 항목에 접근하기</h2>
-	<p class="desc_contents">
-		<!-- <span class="desc_title">기본형 : 요소.value</span> -->
-		<span>select 태그 : 선택 목록 </span>
-		<span>option 태그 : 선택 목록의 항목들</span>
-	</p>
-	<h3>선택 목록에 접근하기(수강신청하기폼)</h3>
+	<h2>라디오 버튼과 체크 박스에 접근하기(수강신청폼)</h2>
+	<h3>라디오 버튼에 접근하기/체크박스에 접근하기/checked 속성을 사용해 선택한 항목에 접근하기</h3>
 	<h4>(콘솔도구로 확인하기)</h4>
-	<p class="h4_desc">
-		<span>웹 개발자 도구 > [요소(Elements)]탭을 클릭하면 태그를 확인할 수 있다.</span>
-		<span class="point">select 태그에 id 값이 있으므로 querySelector()함수를 사용해 접근 가능하다.</span>
-		<span class="point">document.querySelector("#major")</span>
-		<span>선택 목록에 옵션 항목을 접근하려면 options 프로퍼티를 사용한다.</span>
-		<span class="point">document.querySelector("#major").options</span>
-		<span>HTMLOptions Collection(7)이 나타나고</span>
-		<span class="point"> 앞쪽에 ▶ 를 클릭해 계속 따라가면 안쪽에 저장된 배열을 확인할 수 있다.</span>
-		<span class="point">length 속성에는 옵션 항목에 갯수가, selectedIndex에는 사용자의 선택이 저장된다.</span>
-		<span>옵션 항목 중 '산업공학과'를 선택한 후</span>
-		<span>다시 document.querySelector("#major").options로 확인하면</span>
-		<span class="point">selectedIndex값이 3으로 변경되었음을 확인할 수 있다. </span>
-	</p>
-	<div id="container">
+	<div class="containers">
 		<h1>수강신청</h1>
 		<form name="testForm">
-			<fieldset>
+			<!-- <fieldset>
 				<legend>신청인</legend>
 				<ul>
 					<li>
@@ -57,26 +39,104 @@
 						</select>
 					</li>
 				</ul>
-			</fieldset>
-			<!-- <fieldset>
+			</fieldset> -->
+			<p class="h4_desc">
+				<span class="desc_title">[라디오 버튼에 접근하기]</span>
+				<span>라디오 버튼은 여러 항목이 있어도 하나만 선택된다.</span>
+				<span>그러나 모든 항목은 결국 '신청 과목'이라는</span>
+				<span>하나의 덩어리로 name 속성을 사용해서 접근한다.</span>
+				<span class="point"> 콘솔 창에서 document.testForm.subject를 입력하면</span>
+				<span>같은 name값을 가진 요소를 가진 라디오 버튼들은</span>
+				<span>RadioNodeList라는 노드 리스트 형태로 저장된다.</span>
+				<span>RadioNodeList 앞에 ▶ 를 클릭하면</span>
+				<span>내부 값을 확인할 수 있다.</span>
+				<span class="point">아직 선택한 값이 없을 때는 value 값이 ""로 비어있지만</span>
+				<span>버튼을 선택하고 다시 콘솔에 document.testForm.subject를 입력 해주면</span>
+				<span class="point">선택한 값의 value 값(ex_문법:grammar)이 나온다.</span>
+			</p>
+			<fieldset>
 				<legend>신청 과목</legend>
 				<p>이 달에 신청할 과목을 선택하세요.</p>
 				<label><input type="radio" name="subject" value="speaking">회화</label>
 				<label><input type="radio" name="subject" value="grammar">문법</label>
 				<label><input type="radio" name="subject" value="writing">작문</label>
 			</fieldset>
+			<p class="h4_desc">
+				<span class="desc_title">[체크 박스에 접근하기]</span>
+				<span>체크 박스는 라디오 버튼과는 달리 </span>
+				<span>여러개의 항목을 선택하는 것이 가능하지만 </span>
+			</p>
+			<p class="h4_desc">
+				<span class="point_change">라디오 버튼 처럼 '메일링'이라는 하나의 주제로 </span>
+				<span class="point_change"> 묶을 수 있다. 따라서 라디오 버튼 처럼 </span>
+				<span class="point_change">각 항목의 name을 똑같이 쓰고</span>
+				<span class="point_change">name 속성을 사용해서 접근한다.</span>
+			</p>
+			<p class="h4_desc">
+				<span>예를 들어 체크박스에 접근 하려면</span>
+				<span class="point"> 콘솔 창에서 document.testForm.mailing을 입력한다.</span>
+				<span>같은 name값을 가진 check 박스도</span>
+				<span>RadioNodeList라는 노드 리스트 형태로 저장된다.</span>
+				<span>RadioNodeList 앞에 ▶ 를 클릭하면</span>
+				<span>내부 값을 확인할 수 있다.</span>
+			</p>
+			<p class="h4_desc">
+				<span class="point_change">단, 첫번째 박스의 내용을 가져오려면</span>
+				<span class="point_change">콘솔에서 document.testForm.mailing[0].value를</span>
+				<span class="point_change">입력해야 한다.</span>
+			</p>
 			<fieldset>
 				<legend>메일링</legend>
 				<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요</p>
 				<label><input type="checkbox" id="new" name="mailing" value="news">해외 단신</label>
 				<label><input type="checkbox" id="dialog" name="mailing" value="dialog">5분 회화</label>
 				<label><input type="checkbox" id="pops" name="mailing" value="pops">모닝팝스</label>
-			</fieldset> -->
+			</fieldset>
+			<p class="h4_desc">
+				<span class="desc_title">[checked속성을 사용해 선택한 항목에 접근하기]</span>
+				<span class="point">라디오 버튼이나 체크 박스에는 checked 속성이 있는데</span>
+				<span>checked 속성은 선택하거나, 선택하지 않는 2개의 값만</span>
+				<span> 가지므로 논리형 값(True, False)으로만 표현된다.</span>
+			</p>
+			<p class="h4_desc">
+				<span class="point_change">특정 항목을 선택할 경우 그 항목의 속성은 true가 되며</span>
+				<span class="point_change">특정 항목을 선택하지 않을 경우에는 false가 된다.</span>
+			</p>
+			<p class="h4_desc">
+				<span>그래서 사용자가 어떤 항목을 선택했는지 알고 싶을 땐</span>
+				<span class="point">checked 속성을 찾아야 한다. </span>
+				<span>예를 들어, 라디오 버튼에서 사용자가 '신청과목'을</span>
+				<span>'문법(name="<strong>subject</strong>" value="<strong>grammar</strong>")'으로 선택 시</span>
+				<span class="point">해당 input 태그에는 checked 속성이 추가된다.</span>
+			</p>
+			<p class="h4_desc">
+				<span>콘솔에 아래와 같이 querySelector 구문을 입력하면 </span>
+				<span class="point_change">document.querySelector("input[name='subject']:checked")</span>
+			</p>
+			<p class="h4_desc">
+				<span>다음과 같이 확인할 수 있다. </span>
+				<span class="point_change">
+					input type="radio" name="<strong>subject</strong>"
+					value="<strong>speaking</strong>"
+				</span>
+			</p>
+			<p class="h4_desc">
+				<span>단, 체크박스는 항목의 중복 선택이 가능하므로</span>
+				<span>항목 선택 후 querySelectorAll 구문으로 값을 확인한다.</span>
+			</p>
+			<p class="h4_desc">
+				<span>해외단신(name="<strong>new</strong>"), 5분회화(name="<strong>pops</strong>") 선택</span>
+				<span class="point">document.querySelectorAll("input[name='mailing']:checked")</span>
+				<span class="point">▶ NodeList(2)[input#<strong>new</strong>, input#<strong>pops</strong>]</span>
+			</p>
+			<p class="h4_desc">
+				<span>위와 같이 노드 리스트 형태로 </span>
+				<span>선택한 항목들이 저장되어 보여진다.</span>
+			</p>
 		</form>
-		<button id="send">전송하기</button>
+		<!-- <button id="send">전송하기</button> -->
 	</div>
-
-	<script src="js/getForm.js"></script>
+	<!-- <script src="js/getForm.js"></script> -->
 </body>
 
 </html>

@@ -101,7 +101,7 @@ text {
 }
 .desc_title {
   display: block;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-weight: bold;
   font-size: 20px;
 }

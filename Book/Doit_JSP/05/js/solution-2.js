@@ -5,6 +5,7 @@ let result = document.querySelector("#result");
 
 button.onclick = function () {
   result.innerText = getGCD(n.value, m.value);
+  (result.innerText === "0") ? result.style.backgroundColor = "white" : result.style.backgroundColor = "yellow";
 };
 
 function getGCD(n, m) {

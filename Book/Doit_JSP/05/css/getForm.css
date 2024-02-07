@@ -2,6 +2,10 @@
 	width: 500px;
 	margin: 10px auto;
 }
+.containers {
+	width: 500px;
+	margin: 10px auto;
+}
 form fieldset {
 	margin-bottom: 25px;
 }
@@ -70,4 +74,22 @@ select {
 }
 option {
 	text-align: left;
+}
+.containers h1 {
+	font-size: 24px;
+}
+.containers .h4_desc {
+	margin: 0 auto;
+	padding: 0 0 15px 0;
+}
+.containers .point {
+	margin: 10px auto;
+}
+.containers .point_change {
+	margin: 0 auto;
+	color: red;
+}
+.containers .desc_title {
+	font-size: 18px;
+	color: green;
 }
