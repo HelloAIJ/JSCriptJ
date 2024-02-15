@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>193P 마우스 이벤트</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/event.css">
+</head>
+
+<body>
+  <h1>이벤트와 이벤트 처리기 : 이벤트 알아보기</h1>
+  <h2>마우스 이벤트</h2>
+  <p class="desc_contents">
+    <span class="desc_title h2black">마우스 이벤트의 종류</span>
+    <span class="desc_ex ex_main point">click : HTML 요소를 클릭 했을 때</span>
+    <span class="desc_ex ex_main">dblclick : HTML 요소를 더블클릭 했을 때</span>
+    <span class="desc_ex ex_main">mousedown : 요소에서 마우스 버튼을 눌렀을 때</span>
+    <span class="desc_ex ex_main">mousemove : 요소에서 마우스 포인터를 움직일 때</span>
+    <span class="desc_ex ex_main">mouseover : 포인터를 요소위로 옮길 때 </span>
+    <span class="desc_ex ex_main">mouseout : 포인터가 요소를 벗어날 때</span>
+    <span class="desc_ex ex_main">mouseup : 요소 위에 올려 놓은 마우스 버튼에서 손을 땔 때</span>
+  </p>
+  <h3>버튼을 클릭하면 배경색이 변경되는 이벤트구현하기</h3>
+  <h4>(웹 개발자 도구 : F12)</h4>
+  <p class="h4_desc">
+    <span>웹 개발자 도구 > 소스[(Sources)]탭을 클릭하면 해당 js 파일을 확인할 수 있다.</span>
+    <span class="point">document.querySelector("")를 사용하여</span>
+    <span class="point">이벤트가 실행될 button의 위치를 지정하고 이를 const로 선언한다.</span>
+    <span class="point">button.onclick으로 배경을 변경하는 style 이벤트를 추가한다.</span>
+    <span>하단의 버튼을 클릭하여 자바스크립트의 동작을 보자.</span>
+  </p>
+  <button>Click</button>
+  <p class="h4_desc">
+    <span>위의 버튼은 1회성으로 변화된다.</span>
+    <span class="point marginB0">아래의 버튼은 토글 기능을 적용한 버튼이다. </span>
+  </p>
+  <button id="bttn2">Click(토글가능)</button>
+  <script src="js/event-2.js"></script>
+</body>
+
+</html>

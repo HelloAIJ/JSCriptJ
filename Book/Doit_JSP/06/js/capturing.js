@@ -10,9 +10,9 @@ for (let element of elements) {
 }
 
 // 아래와 같이 사용할 수도 있지만 for ... of 문 사용을 추천
-for (let i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", function (e) {
-    console.log(e.target.tagName);
-  }, true);
-}
+// for (let i = 0; i < elements.length; i++) {
+//   elements[i].addEventListener("click", function (e) {
+//     console.log(e.target.tagName);
+//   }, true);
+// }
 // P 다섯개로 log됨
