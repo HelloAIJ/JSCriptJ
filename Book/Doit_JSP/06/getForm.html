@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>195P 폼 이벤트</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/getForm.css">
+</head>
+
+<body>
+	<h1>이벤트와 이벤트 처리기 : 이벤트 알아보기</h1>
+	<h2>폼 이벤트(ch05. 수강신청 폼) </h2>
+	<p class="desc_contents">
+		<span class="desc_title h2black">폼 이벤트의 종류</span>
+		<span class="desc_ex ex_main">blur : 폼 요소에 포커스를 잃었을 때</span>
+		<span class="desc_ex ex_main point">change : 목록이나 체크 상태 등이 변경되었을 때(input, select, textarea 태그에서 사용)</span>
+		<span class="desc_ex ex_main">focus : 폼 요소에 포커스를 놓았을 때(label, select, textarea, button 태그에서 사용)</span>
+		<span class="desc_ex ex_main">reset : 폼이 리셋되었을 때 </span>
+		<span class="desc_ex ex_main">submit : submit 버튼을 클릭했을 때 </span>
+	</p>
+	<h3>선택목록에서 옵션 선택 시 change 이벤트로 과목명 alert 발생</h3>
+	<h4>(웹 개발자 도구 : F12)</h4>
+	<div class="containers">
+		<h1>수강신청</h1>
+		<form name="testForm">
+			<fieldset>
+				<legend>신청인</legend>
+				<ul>
+					<li>
+						<label class="reg" for="userName">이름</label>
+						<input type="text" id="userName" name="userName" maxlength="50">
+					</li>
+					<li>
+						<label class="reg" for="major">학과</label>
+						<select name="major" id="major">
+							<option>----------- 학과 선택 ------------</option>
+							<option value="archi">건축공학과</option>
+							<option value="mechanic">기계공학과</option>
+							<option value="indust">산업공학과</option>
+							<option value="elec">전기전자공학과</option>
+							<option value="computer">컴퓨터공학과</option>
+							<option value="chemical">화학공학과</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>신청 과목</legend>
+				<p>이 달에 신청할 과목을 선택하세요.</p>
+				<label><input type="radio" name="subject" value="speaking">회화</label>
+				<label><input type="radio" name="subject" value="grammar">문법</label>
+				<label><input type="radio" name="subject" value="writing">작문</label>
+			</fieldset>
+			<fieldset>
+				<legend>메일링</legend>
+				<p>메일로 받고 싶은 뉴스 주제를 선택해 주세요</p>
+				<label><input type="checkbox" id="new" name="mailing" value="news">해외 단신</label>
+				<label><input type="checkbox" id="dialog" name="mailing" value="dialog">5분 회화</label>
+				<label><input type="checkbox" id="pops" name="mailing" value="pops">모닝팝스</label>
+			</fieldset>
+		</form>
+		<button id="send">전송하기</button>
+	</div>
+	<p class="h4_desc">
+		<span>웹 개발자 도구 > 소스[(Sources)]탭을 클릭하면 해당 js 파일을 확인할 수 있다.</span>
+		<span class="point">const로 body와 result를 선언하고</span>
+		<span>result에 나타내어질 이벤트 내용을 기입한다.</span>
+		<span class="point">body.addEventListener("keydown",(e)=>{조건})</span>
+		<span class="point">조건 : result.innerText=`code : ${e.code}, key : ${e.key}`;</span>
+	</p>
+	<script src="js/getForm.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+button {
+	width: 100%;
+	padding: 10px 20px;
+}
+button:hover {
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	cursor: pointer;
+}
+.h4_desc > span {
+	display: block;
+	color: blue;
+	font-size: 16px;
+}
+.h4_desc .point {
+	color: red;
+	margin: 20px auto;
+}
+.desc_contents {
+	padding: 20px 30px;
+	width: 560px;
+	background-color: rgba(200, 200, 200, .4);
+}
+/* .desc_contents > span {
+	display: block;
+} */
+.point {
+	color: red;
+}
+/* .point_change {
+	margin: 0 auto;
+	color: red;
+} */
+.h2black {
+	color: #222;
+	margin-bottom: 30px;
+}
+.h4_desc .marginB0 {
+	margin-bottom: 0;
+}
+h3, h4 {
+	margin: 10px auto 0 auto;
+}
+#pointbold {
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin: 20px auto;
+	color: red;
+}
+.spanbox {
+	display: inline-block;
+	width: 618px;
+	height: 80px;
+	background-color: rgba(255, 100, 100, .4);
+	line-height: 80px;
+}

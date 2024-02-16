@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>키 코드</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>195P 키보드 이벤트</title>
   <link rel="stylesheet" href="css/main.css">
-  <style>
-    #result {
-      text-align: center;
-      font-weight:bold;
-      font-size:1.5em;
-      color:crimson;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/keycode.css">
 </head>
+
 <body>
-  <h1>키보드의 아무 키나 눌러보세요</h1>
-
-  <div id="result"></div>
-
+  <h1>이벤트와 이벤트 처리기 : 이벤트 알아보기</h1>
+  <h2>키보드 이벤트</h2>
+  <p class="desc_contents">
+    <span class="desc_title h2black">키보드 이벤트의 종류</span>
+    <span class="desc_ex ex_main point">keydown : 키를 누르는 동안</span>
+    <span class="desc_ex ex_main">keypress : 키를 눌렀을 때</span>
+    <span class="desc_ex ex_main">keyup : 키에서 손을 뗄 때</span>
+  </p>
+  <h3>키보드에서 키를 눌렀을 때 어떤 키인지 나타내는 이벤트 구현하기</h3>
+  <h4>(웹 개발자 도구 : F12)</h4>
+  <p class="h4_desc">
+    <span>웹 개발자 도구 > 소스[(Sources)]탭을 클릭하면 해당 js 파일을 확인할 수 있다.</span>
+    <span class="point">const로 body와 result를 선언하고</span>
+    <span>result에 나타내어질 이벤트 내용을 기입한다.</span>
+    <span class="point">body.addEventListener("keydown",(e)=>{조건})</span>
+    <span class="point">조건 : result.innerText=`code : ${e.code}, key : ${e.key}`;</span>
+  </p>
+  <div id="result-box">
+    <span id="pointbold">키보드의 아무 키나 눌러보세요.</span>
+    <div id="result"></div>
+  </div>
   <script src="js/keycode.js"></script>
 </body>
+
 </html>
